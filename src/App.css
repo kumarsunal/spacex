@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+.container {
+  background-color: #cccccc;
+  padding: 25px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-heading {
+  font-size: 25px;
+  color: #000;
+  margin: 0 0 15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  background: white;
+  margin-bottom: 2em;
+}
+
+.card a {
+  color: #3345ff;
+  text-decoration: none;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 18px;
+}
+
+.card-content p {
+  font-size: 80%;
+}
+
+.card .thumbnail {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.card ul {
+  padding-left: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card li div {
+  width: 50%;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card li .display-value {
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 700px) {
+  .card {
+    flex: 0 1 calc(50% - 1em);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 1024px) and (min-width: 701px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 1 calc(25% - 1em);
   }
 }
